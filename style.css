@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.intro {
+    background-image: url(images/devloper.jpg);
+    width: 100%;
+    height: 700px;
+    position: relative;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro .text {
+    position: absolute;
+    top: 15%;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: whitesmoke;
+    margin-left:10% ;
+    transition: .5s ease;
+}
+
+.intro .text h1 span {
+    font-size: 2.3rem;
+}
+
+.textBg{
+    background-color: rgba(102, 102, 102, 0.687);
+    padding: 10px 20px;
+}
+
+.header {
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+    text-align: center;
+    padding: 2rem;
+}
+
+.intro .text:hover {
+    transform: scale(1.1);
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    overflow: hidden;
+    animation:typing 4s steps(40,end) infinite alternate,blink 0.75s step-end infinite;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+@keyframes typing {
+    from { width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes blink {
+    from,to {border-color: transparent;}
+    50% {border-color: orange;}
+}
+
+.header h1 span {
+    font-size: 6rem;
+}
+
+.cards {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 3vw 5vw;
+}
+
+.cards .item{
+    cursor: pointer;
+    margin: 3vw;
+    border-radius: 15px;
+    transition: 0.5s ease;
+}
+
+.cards .item:hover {
+    box-shadow: 0px 4px 3px 0px black;  
+    transform:scale(1.1);
+}
+.cards .item >img {
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.cards .item .text {
+    position: relative;
+    padding: 15px;
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.item .text h1 {
+    margin-bottom:10px;
+    font-size: 1.3rem;
+}
+
+
+.touchme {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.touchme > section{
+    padding:2vw 7vw;
+    transition: .5s ease;
+}
+
+.touchme >section:hover {
+    transform: scale(1.1);
+    border-radius: 15px;
+}
+.touchme >section h1{
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.touchme >section p {
+    font-weight: 300;
+    line-height: 1.8;
+}
+.touchme .contact {
+    background-color: #515603;
+    color: #ffffff;
+}
+
+.touchme .about {
+    background-color: #722300;
+    color: #ffffff;
+}
+
+footer {
+    background-color:  rgb(20, 20, 20);
+    color: whitesmoke;
+    text-align: center;
+    padding: 2vw 10vw;
+}
+
+footer h4 {
+    font-weight: 100;
+}
+
+
+@media screen and (max-width:600px) {
+    .cards {
+        display: block;
+    }
+
+    .cards .item {
+        margin: 10vw 1vw;
+    }
+
+    .touchme {
+        display: block;
+    }
+
+    .touchme > section {
+        padding: 7vw 5vw;
+    }
+
+    .header {
+        padding:4vw 2vw;
+    }
+    .header h1 {
+        font-size: 7vw;
+    }
+
+    .header h1 span {
+        font-size: 9vw;
+    }
+}
